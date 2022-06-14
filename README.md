@@ -40,7 +40,9 @@
     Console application that follows your game state and provides options. It saves time for finding words.
     Currently only working for standard daily SPANISH challenges.
     <br />
-    <a href="https://github.com/joralgra/wordleBOT"><strong>Explore the docs »</strong></a>
+    <a href="https://wordle.danielfrg.com/"><strong>Spanish Version of Wordle »</strong></a>
+ <br />
+  <a href="https://www.nytimes.com/games/wordle/index.html/"><strong>English Version of Wordle »</strong></a>
     <br />
     <br />
     <a href="https://github.com/joralgra/wordleBOT">View Demo</a>
@@ -169,7 +171,7 @@ Introduce a wildcard for each character of the word:
   **?a** --> States that the 'a' was YELLOW at that position. (The final words has 'a' at other position)
 
 ### p.e
-The input string **-a?m!i-g!o**
+The input pattern string **-a?m!i-g!o**
 
 - States that the final word doesn't have 'a' or 'g' (GREYS). 
 - States that the final word has 'i' and 'o' (GREENS) are in his correct place. 
