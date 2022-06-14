@@ -41,8 +41,8 @@
     Currently only working for standard daily SPANISH challenges.
     <br />
     <a href="https://wordle.danielfrg.com/"><strong>Spanish Version of Wordle »</strong></a>
- <br />
-  <a href="https://www.nytimes.com/games/wordle/index.html/"><strong>English Version of Wordle »</strong></a>
+    <br />
+    <a href="https://www.nytimes.com/games/wordle/index.html"><strong>English Version of Wordle »</strong></a>
     <br />
     <br />
     <a href="https://github.com/joralgra/wordleBOT">View Demo</a>
