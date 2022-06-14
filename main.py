@@ -1,7 +1,4 @@
-import json
 import re
-import tkinter as tk
-import json
 import tkinter as tk
 import json
 

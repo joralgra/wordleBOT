@@ -6,6 +6,7 @@ import pandas as pd
 import numpy as np
 import pickle
 
+DEBUGG = 0 # 0 = False, 1 = True
 
 def levenshteinDistance(str1, str2):
     m = len(str1)
@@ -68,5 +69,7 @@ with open('data/spanish.txt', 'r', encoding="utf-8") as file:
         for j in range(0, len(List2)):
             Matrix[i, j] = levenshteinDistance(List1[i], List2[j])
 
-    print(Matrix)
+    if DEBUGG:
+        print(Matrix)
+
     pickle.dump(Matrix, open("data/leveDistanceMatrix", "wb"))
