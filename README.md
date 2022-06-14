@@ -190,8 +190,10 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] Ranking of best 10 words
   - [ ] Feeling lucky (Providing one complete random word)
   - [ ] Need a challenge (Providing one of the worst 10% words)
-- [ ] Add ENGLISH! (data that needs to share the /data/spanish.txt format)
-- [ ] Improved help, make it visual.
+- [ ] Add ENGLISH! (Just need data that needs to share the /data/spanish.txt format)
+- [ ] Missing verb conjugations inside /data/spanish.txt (Can be used but not for the final word(?))
+- [ ] Improved help/instructions, make it more visual
+- [ ] Make a usable UI instead of console application
 - [ ] Game state visualization improvement
 - [ ] Game state CRUD
 - [ ] Add other Wordle game modes
