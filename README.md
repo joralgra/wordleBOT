@@ -271,4 +271,4 @@ Project Link: [https://github.com/joralgra/wordleBOT](https://github.com/joralgr
 [license-url]: https://github.com/joralgra/wordleBOT/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/jordi-almendros-granero
-[product-screenshot]: images/screenshot.png
+[product-screenshot]: images/example.png
