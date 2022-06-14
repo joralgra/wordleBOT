@@ -160,6 +160,21 @@ Tested with Python 3.9
 
 Execute main.py to start the console application.
 
+Introduce a wildcard for each character of the word:
+
+  **-a** --> States that the 'a' was GREY at that position. (The final words doesn't have 'a')
+  
+  **!a** --> States that the 'a' was GREEN at that position. (The final words has 'a' at that specific position)
+  
+  **?a** --> States that the 'a' was YELLOW at that position. (The final words has 'a' at other position)
+
+### p.e
+The input string **-a?m!i-g!o**
+
+- States that the final word doesn't have 'a' or 'g' (GREYS). 
+- States that the final word has 'i' and 'o' (GREENS) are in his correct place. 
+- States that the final word has 'm' but is in other position, not in the second character (YELLOWS).
+
 _For more examples, please refer to the [Documentation](https://example.com)_
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -175,12 +190,13 @@ _For more examples, please refer to the [Documentation](https://example.com)_
   - [ ] Ranking of best 10 words
   - [ ] Feeling lucky (Providing one complete random word)
   - [ ] Need a challenge (Providing one of the worst 10% words)
-- [ ] Add ENGLISH! (data that needs to share the /data/spanish.txt format...)
+- [ ] Add ENGLISH! (data that needs to share the /data/spanish.txt format)
 - [ ] Improved help, make it visual.
 - [ ] Game state visualization improvement
 - [ ] Game state CRUD
-
-
+- [ ] Add other Wordle game modes
+- [ ] Get game state from the wordle webpage.
+- [ ] Game theory IA training ... Win % for each turn
 
 See the [open issues](https://github.com/joralgra/wordleBOT/issues) for a full list of proposed features (and known issues).
 
