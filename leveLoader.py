@@ -26,6 +26,7 @@ with open('data/spanish.txt', 'r', encoding="utf-8") as file:
     ordered_rows_indexes = [i[0] for i in sorted(enumerate(row_sums), key=lambda k: k[1], reverse=False)]
     print(ordered_rows_indexes)
 
+    # Print Ranking with his corresponding levenhstain distances
     for i, index in enumerate(ordered_rows_indexes):
         ranking = data[index]
         if not hasRepeatedChars(data[index]):

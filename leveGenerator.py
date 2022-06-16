@@ -6,8 +6,9 @@ import pandas as pd
 import numpy as np
 import pickle
 
-DEBUGG = 0 # 0 = False, 1 = True
+DEBUGG = 0  # 0 = False, 1 = True
 
+# TODO make a distance that penalizes that a word is using two of the same character.
 def levenshteinDistance(str1, str2):
     m = len(str1)
     n = len(str2)
@@ -48,28 +49,29 @@ def printProgressBar(iteration, total, prefix='', suffix='', decimals=1, length=
         print()
 
 
-with open('data/spanish.txt', 'r', encoding="utf-8") as file:
-    # Gets a word per array element
-    data = file.read().splitlines()
+def generateBaseMatrix():
+    with open('data/spanish.txt', 'r', encoding="utf-8") as file:
+        # Gets a word per array element
+        words = file.read().splitlines()
 
-    # Gets the number of words
-    num_words = len(data)
-    print('Number of words:', num_words)
+        bmat = generateLeveMatrix(words)
+        pickle.dump(bmat, open("data/leveDistanceMatrix", "wb"))
 
+
+def generateLeveMatrix(data):
     # Y = pdist(data, lambda u, v: levenshteinDistance(u, v))
+    list1 = data
+    list2 = data
 
-    List1 = data
-    List2 = data
+    matrix = np.zeros((len(list1), len(list2)), dtype=int)
 
-    Matrix = np.zeros((len(List1), len(List2)), dtype=int)
-
-    for i in range(0, len(List1)):
-        # print("Progress : {}".format(str(i/len(List1)*100)))
-        printProgressBar(i, len(List1))
-        for j in range(0, len(List2)):
-            Matrix[i, j] = levenshteinDistance(List1[i], List2[j])
+    for i in range(0, len(list1)):
+        # print("Progress : {}".format(str(i/len(list1)*100)))
+        printProgressBar(i, len(list1))
+        for j in range(0, len(list2)):
+            matrix[i, j] = levenshteinDistance(list1[i], list2[j])
 
     if DEBUGG:
-        print(Matrix)
+        print(matrix)
 
-    pickle.dump(Matrix, open("data/leveDistanceMatrix", "wb"))
+    return matrix

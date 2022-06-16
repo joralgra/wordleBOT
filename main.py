@@ -1,7 +1,7 @@
 import re
 import tkinter as tk
 import json
-
+import leveGenerator as lGen
 
 def init_pos_state():
     state = [{"yellow": [], "green": []}, {"yellow": [], "green": []}, {"yellow": [], "green": []},
@@ -187,3 +187,17 @@ if __name__ == '__main__':
                 posibilities = produce_posibilities(data, pos_state, greys_state)
                 print('Possible words: {}'.format(posibilities))
                 print('How many posibilities: {}'.format(len(posibilities)))
+
+                matrix = lGen.generateLeveMatrix(posibilities)
+
+                # Total distances for each word, minus distance is better
+                row_sums = sum(matrix)
+
+                # Order of indexes
+                ordered_rows_indexes = [i[0] for i in sorted(enumerate(row_sums), key=lambda k: k[1], reverse=False)]
+                print(ordered_rows_indexes)
+
+                # Print Ranking with his corresponding Levenshtein distances
+                for i, index in enumerate(ordered_rows_indexes):
+                    ranking = posibilities[index]
+                    print("Ranking[{}] -> {} -> Leve distance[{}]".format(i, posibilities[index], row_sums[index]))
