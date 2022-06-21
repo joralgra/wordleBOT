@@ -89,10 +89,10 @@
 [![Product Name Screen Shot][product-screenshot]](https://example.com)
 
 Allows you to introduce a string with the feedback of the game. 
-Then creates a state that filters all the non-available words and shows you the alternatives to introduce in the next place.
-
-**WIP** Prioritizes the possible word options with a Levenshtein distance to any available word. 
-Then makes the introduced word more likely to be close to the final word (if there are many options)
+Then filters all the non-available words and shows you the alternatives to introduce in the next place.
+Between all this words, a ranking is shown to help you choose the best option.
+The ranking sorts  distance of Levenshtein. 
+The word that have less distance with all the non filtered words goes first.
 
 
 <p align="right">(<a href="#top">back to top</a>)</p>
@@ -186,7 +186,7 @@ _For more examples, please refer to the [Documentation](https://example.com)_
 <!-- ROADMAP -->
 ## Roadmap
 
-- [ ] Levenshtein distance for base cases
+- [x] Levenshtein distance for base cases
 - [ ] FIX repeated characters on the same word.
 - [ ] Provide base words for the game first word iteration.
   - [ ] Ranking of best 10 words
